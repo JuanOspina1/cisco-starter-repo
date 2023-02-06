@@ -33,9 +33,9 @@ const IpAddress = (props) => {
   });
 
   return (
-    <div>
+    <span>
       {props.request.toUpperCase()}: {returnedIP}
-    </div>
+    </span>
   );
 };
 

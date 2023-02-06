@@ -16,7 +16,7 @@ const Content = (props) => {
         <ul className="flex flex-wrap -mb-px">
           {props.children.map((item, i) => {
             return (
-              <li className="mr-2">
+              <li className="mr-2" key={i}>
                 <button
                   onClick={() => handleTabs(i)}
                   className={`inline-block p-4 ${
@@ -35,6 +35,7 @@ const Content = (props) => {
       {props.children.map((item, i) => {
         return (
           <div
+            key={i}
             className={`p-4 rounded-lg bg-gray-50 dark:bg-gray-800 ${
               activeTab === i ? "" : "hidden"
             }`}
